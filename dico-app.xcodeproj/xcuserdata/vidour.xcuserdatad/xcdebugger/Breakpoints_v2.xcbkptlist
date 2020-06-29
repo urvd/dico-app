@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7202B69F-0243-4B6A-9B57-252D15D195D1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CCE08468-C976-49A4-9679-C0696358BAA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "fetchDefinition(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "337AD7C1-1E99-43A6-A5EF-472882277AA2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/WordDefinitionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C436609-3A2B-4E51-9B34-40961213B6AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/WordDefinitionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F75CE16-19F7-48DC-81B6-0E1AFE4BBD05"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/WordDefinitionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09B921EA-DF71-4554-BE90-0BD00A4E8209"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/TabFeatureView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "TabFeatureView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "09B921EA-DF71-4554-BE90-0BD00A4E8209 - 5b311b54e939ced1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of dico_app.TabFeatureView.searchText : Swift.String"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/TabFeatureView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "09B921EA-DF71-4554-BE90-0BD00A4E8209 - bd421aca7ab20ba7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dico_app.TabFeatureView.searchText.getter : Swift.String"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/TabFeatureView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "09B921EA-DF71-4554-BE90-0BD00A4E8209 - 2514ec0ff993bab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dico_app.TabFeatureView.searchText.setter : Swift.String"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/TabFeatureView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "219">
+               </Location>
+               <Location
+                  uuid = "09B921EA-DF71-4554-BE90-0BD00A4E8209 - 7348280b71a15fb8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dico_app.TabFeatureView.searchText.modify : Swift.String"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/TabFeatureView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "09B921EA-DF71-4554-BE90-0BD00A4E8209 - b902ef1270537fab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dico_app.TabFeatureView.searchText.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/TabFeatureView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "09B921EA-DF71-4554-BE90-0BD00A4E8209 - 132c2e9bc72d5c63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dico_app.TabFeatureView.$searchText.getter : SwiftUI.Binding&lt;Swift.String&gt;"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/TabFeatureView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  uuid = "09B921EA-DF71-4554-BE90-0BD00A4E8209 - a701bb92e7f2441b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dico_app.TabFeatureView.init() -&gt; dico_app.TabFeatureView"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/TabFeatureView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE5E21DB-14B8-448A-AA6D-7BF4E7713C17"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "fetchDefinition(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE5E21DB-14B8-448A-AA6D-7BF4E7713C17 - 70256e4b78354fee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dico_app.FetchApi.fetchDefinition(completion: (Swift.Array&lt;dico_app.Definition&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/DicoAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "743">
+               </Location>
+               <Location
+                  uuid = "BE5E21DB-14B8-448A-AA6D-7BF4E7713C17 - 98bf21cf4a93d508"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dico_app.FetchApi.fetchDefinition(completion: (Swift.Array&lt;dico_app.Definition&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/DicoAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6914150E-7476-4261-897B-DCB592B9AC7B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "fetchDefinition(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B41CD9ED-82AE-4B25-80FD-49D63FFE6141"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "fetchDefinition(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37064094-F1B3-4106-B78C-B4DB3B624EA0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "fetchDefinition(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71CBCFD5-9320-44F9-ABD6-35BFEE13E69C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "fetchDefinition(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "71CBCFD5-9320-44F9-ABD6-35BFEE13E69C - 93ec188607efe63d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dico_app.FetchApi.fetchDefinition(completion: (Swift.Array&lt;dico_app.Definition&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/DicoAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "451">
+               </Location>
+               <Location
+                  uuid = "71CBCFD5-9320-44F9-ABD6-35BFEE13E69C - 70256e4b78354fee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dico_app.FetchApi.fetchDefinition(completion: (Swift.Array&lt;dico_app.Definition&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "dico-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vidour/Library/Mobile%20Documents/com~apple~CloudDocs/.Trash/libcours3/projects/dico-app/dico-app/DicoAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "291">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F662EA71-0243-48AD-9E38-6B614FEFEBF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "getUrlRequest(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "751E9393-FB35-4C41-A70A-E8934CAB95B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "getUrlRequest(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D6DE5BB-9B41-413C-83D0-E6A105E10C03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getUrlRequest(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21EED04B-C360-4079-AADE-5876C59BB0D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/DicoAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "getUrlRequest(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "376F2E87-F74B-4059-B395-C6192E4C7B15"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/WordDefinitionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7C50A5D-3A96-4F3F-A089-265224B1426D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/WordDefinitionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04D7FDF4-757B-4BEE-972E-5ABDBEBE8F10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/WordDefinitionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3920265C-4B9F-446E-9CB6-23ACCAFA15A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dico-app/WordDefinitionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "init(definition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
