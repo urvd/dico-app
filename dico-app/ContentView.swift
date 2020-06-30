@@ -9,49 +9,44 @@
 import SwiftUI
 
 struct ContentView: View {
-     let array = ["Peter", "Paul", "Mary", "Anna-Lena", "George", "John", "Greg"]
+    
     @State private var searchText = ""
     @State private var searchClick: Bool = false
     @State private var searchAction: Bool = false
     @State private var tabScreen:Bool = false
     
     var body: some View {
-        ZStack{
-            NavigationView {
-                        // Search view
+        NavigationView {
+                    // Search view
+                    HStack {
                         HStack {
-                            HStack {
-                                Image(systemName: "magnifyingglass")
+                            Image(systemName: "magnifyingglass")
 
-                                TextField("search", text: $searchText, onEditingChanged: { isEditing in
-                                    self.searchClick = true
-                                }, onCommit: {
-                                }).foregroundColor(.primary)
+                            TextField("search", text: $searchText, onEditingChanged: { isEditing in
+                                self.searchClick = true
+                            }, onCommit: {
+                            }).foregroundColor(.primary)
 
-                                Button(action: {
-                                    self.searchText = ""
-                                    self.searchClick = false
-                                }) {
-                                    Image(systemName:"xmark.circle.fill").opacity(searchText == "" ? 0 : 1)
-                                }
-                            }
-                            //.padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
-                            .foregroundColor(.secondary)
-                            .background(Color(.secondarySystemBackground))
-                            .cornerRadius(10.0)
-
-                            if searchClick && searchText != "" {                                NavigationLink(destination:TabFeatureView(searchText: self.searchText)) {
-                                    Text("Search")
-                                    .foregroundColor(Color(.systemBlue))
-                                }
+                            Button(action: {
+                                self.searchText = ""
+                                self.searchClick = false
+                            }) {
+                                Image(systemName:"xmark.circle.fill").opacity(searchText == "" ? 0 : 1)
                             }
                         }
-                        
-                        //.resignKeyboardOnDragGesture()
-            }
-            .padding(.horizontal)
-            .navigationBarTitle(Text("Dictionnaire Francais"))
-          
+                        //.padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
+                        .foregroundColor(.secondary)
+                        .background(Color(.secondarySystemBackground))
+                        .cornerRadius(10.0)
+
+                        if searchClick && searchText != "" {                                NavigationLink(destination:TabFeatureView(searchText: self.searchText)) {
+                                Text("Search")
+                                .foregroundColor(Color(.systemBlue))
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                    .navigationBarTitle(Text("Dictionnaire Francais"))
         }
     }
     

@@ -22,7 +22,7 @@ struct UrlBuilder{
     init(type:GETType, word:String) {
         switch (type) {
             case GETType.DEFINITION:
-                self.url = Args.baseUrl + "/" + word + Args.endpointDefinition
+                self.url = "\(Args.baseUrl) /" + word + Args.endpointDefinition
             
             case GETType.SYNONYME:
                 self.url = Args.baseUrl + "/" + word + Args.endpointSynonymes + "?" + Args.RESULT_LIMIT
@@ -49,33 +49,6 @@ struct Word{
     var word:String
 }
 
-// models
-struct Synonyme: Decodable{
-    var mot:String
-    var dicolinkUrl:String
-}
-
-struct Antonyme: Decodable{
-    var mot:String
-    var dicolinkUrl:String
-}
-struct Expression: Decodable{
-    var mot:String
-    var expression:String
-    var semantique:String
-    var context:String
-}
-
-struct Definition: Decodable, Identifiable,Hashable{
-    var id:String
-    var nature:String
-    var source:String
-    var attributionText:String
-    var attributionUrl: String
-    var mot:String
-    var definition:String
-    var dicolinkUrl:String
-}
 
 public class FetchApi {
     
@@ -92,6 +65,7 @@ public class FetchApi {
     private func getUrlRequest(url:URL) -> URLRequest{
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
+        urlRequest.setValue("application/json", forHTTPHeaderField:"content-type")
         urlRequest.setValue("dicolink.p.rapidapi.com", forHTTPHeaderField:"x-rapidapi-host")
         urlRequest.setValue("2ac8d4abe1msh45b7832cd81668ap195eefjsn339672521daf", forHTTPHeaderField:"x-rapidapi-key")
         return urlRequest

@@ -13,29 +13,28 @@ struct WordDefinitionsView: View {
     @State var word:String = ""
     @State var definitions: [Definition] = []
     var body: some View {
-        HStack{
-            VStack{
-                Text("Définition: \(word)").font(.footnote)
+        VStack{
+            HStack{
+                Text("\(word) : definitions").font(.footnote)
             }
-            ScrollView{
-                List(definitions){ definition in
-                    //DefinitionItem(definition: definition)
-                    HStack{
-                        VStack{
-                            Text(definition.mot)
-                                .fontWeight(.bold)
-                            Text(definition.nature)
-                                       .fontWeight(.thin)
-                        }
-                        Text(definition.definition)
-                        Text(definition.source)
+            
+            List(definitions){ definition in
+                DefinitionItem(definition: definition)
+                /*HStack{
+                    VStack{
+                        Text(definition.mot)
+                            .fontWeight(.bold)
+                        Text(definition.nature)
+                                   .fontWeight(.thin)
                     }
-                }
-                .onAppear {
-                    //let service = FetchApi(type:GETType.DEFINITION, word:self.word)
-                     FetchApi(type:GETType.DEFINITION, word:self.word).fetchDefinition{ (definitions) in
-                        self.definitions = definitions
-                    }
+                    Text(definition.definition)
+                    Text(definition.source)
+                }*/
+            }
+            .onAppear {
+                //let service = FetchApi(type:GETType.DEFINITION, word:self.word)
+                 FetchApi(type:GETType.DEFINITION, word:self.word).fetchDefinition{ (definitions) in
+                    self.definitions = definitions
                 }
             }
         }
@@ -49,13 +48,12 @@ struct WordDefinitionsView: View {
         var definition:Definition
         var body: some View {
             HStack{
-                VStack{
                     Text(definition.mot)
                         .fontWeight(.bold)
                     Divider()
                     Text(definition.nature)
                     .fontWeight(.thin)
-                }
+                Spacer()
                 Text(definition.definition)
                 Text(definition.source)
             }

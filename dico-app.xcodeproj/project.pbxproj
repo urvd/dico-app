@@ -18,6 +18,7 @@
 		7C822086249F33110008DB7E /* DicoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C822085249F33110008DB7E /* DicoAPIService.swift */; };
 		7C82208824A07A910008DB7E /* WordDefinitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82208724A07A910008DB7E /* WordDefinitionsView.swift */; };
 		7C82208B24A11D5A0008DB7E /* TabFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82208A24A11D5A0008DB7E /* TabFeatureView.swift */; };
+		7C82209524AA1F1F0008DB7E /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82209424AA1F1F0008DB7E /* models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7C822085249F33110008DB7E /* DicoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicoAPIService.swift; sourceTree = "<group>"; };
 		7C82208724A07A910008DB7E /* WordDefinitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionsView.swift; sourceTree = "<group>"; };
 		7C82208A24A11D5A0008DB7E /* TabFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFeatureView.swift; sourceTree = "<group>"; };
+		7C82209424AA1F1F0008DB7E /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +106,15 @@
 		7C822052249F300F0008DB7E /* dico-app */ = {
 			isa = PBXGroup;
 			children = (
+				7C82209324AA1EA30008DB7E /* providers */,
 				7C82208C24A11F020008DB7E /* feature-views */,
-				7C82208924A0AA660008DB7E /* model-component */,
 				7C822053249F300F0008DB7E /* AppDelegate.swift */,
 				7C822055249F300F0008DB7E /* SceneDelegate.swift */,
 				7C822057249F300F0008DB7E /* ContentView.swift */,
-				7C82208724A07A910008DB7E /* WordDefinitionsView.swift */,
 				7C822059249F30130008DB7E /* Assets.xcassets */,
 				7C82205E249F30130008DB7E /* LaunchScreen.storyboard */,
 				7C822061249F30130008DB7E /* Info.plist */,
 				7C82205B249F30130008DB7E /* Preview Content */,
-				7C822085249F33110008DB7E /* DicoAPIService.swift */,
 				7C822069249F30130008DB7E /* dico-appTests */,
 				7C82208A24A11D5A0008DB7E /* TabFeatureView.swift */,
 			);
@@ -147,18 +147,21 @@
 			path = "dico-appUITests";
 			sourceTree = "<group>";
 		};
-		7C82208924A0AA660008DB7E /* model-component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "model-component";
-			sourceTree = "<group>";
-		};
 		7C82208C24A11F020008DB7E /* feature-views */ = {
 			isa = PBXGroup;
 			children = (
+				7C82208724A07A910008DB7E /* WordDefinitionsView.swift */,
 			);
 			path = "feature-views";
+			sourceTree = "<group>";
+		};
+		7C82209324AA1EA30008DB7E /* providers */ = {
+			isa = PBXGroup;
+			children = (
+				7C822085249F33110008DB7E /* DicoAPIService.swift */,
+				7C82209424AA1F1F0008DB7E /* models.swift */,
+			);
+			path = providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C82209524AA1F1F0008DB7E /* models.swift in Sources */,
 				7C822054249F300F0008DB7E /* AppDelegate.swift in Sources */,
 				7C822086249F33110008DB7E /* DicoAPIService.swift in Sources */,
 				7C82208824A07A910008DB7E /* WordDefinitionsView.swift in Sources */,
