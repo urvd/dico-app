@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TabFeatureView: View {
     @State var searchText:String = ""
-    
+    @State var activeTab:GETType = .DEFINITION
     var body: some View {
         ZStack{
             TabView{

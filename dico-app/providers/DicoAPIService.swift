@@ -10,7 +10,7 @@
 import  Foundation
 
 struct Args{
-    static var baseUrl = "https//dicolink.p.rapidapi.com/mot"
+    static var baseUrl = "https://dicolink.p.rapidapi.com/mot"
     static var endpointSynonymes = "/synonymes"
     static var endpointAntonymes = "/antonymes"
     static var endpointDefinition = "/definitions"
@@ -22,26 +22,22 @@ struct UrlBuilder{
     init(type:GETType, word:String) {
         switch (type) {
             case GETType.DEFINITION:
-                self.url = "\(Args.baseUrl) /" + word + Args.endpointDefinition
+                self.url = "\(Args.baseUrl)/\(word)\(Args.endpointDefinition)"
             
             case GETType.SYNONYME:
-                self.url = Args.baseUrl + "/" + word + Args.endpointSynonymes + "?" + Args.RESULT_LIMIT
+                self.url = "\(Args.baseUrl)/\(word)\(Args.endpointSynonymes)?\(Args.RESULT_LIMIT)"
             
             case GETType.ANTONYME:
-                self.url = Args.baseUrl + "/" + word + Args.endpointAntonymes + "?" + Args.RESULT_LIMIT
+                self.url = "\(Args.baseUrl)/\(word)\(Args.endpointAntonymes)?\(Args.RESULT_LIMIT)"
             
             case GETType.EXPRESSION:
-                self.url = Args.baseUrl + "/" + word + Args.endpointExpression + "?" + Args.RESULT_LIMIT
+                self.url = "\(Args.baseUrl)/\(word)\(Args.endpointExpression)?\(Args.RESULT_LIMIT)"
         }
     }
     var url:String
     
 }
 
-enum GETType{
-    case SYNONYME, ANTONYME, DEFINITION, EXPRESSION
-    
-}
 struct Word{
     init(word:String) {
         self.word = word
@@ -69,6 +65,9 @@ public class FetchApi {
         urlRequest.setValue("dicolink.p.rapidapi.com", forHTTPHeaderField:"x-rapidapi-host")
         urlRequest.setValue("2ac8d4abe1msh45b7832cd81668ap195eefjsn339672521daf", forHTTPHeaderField:"x-rapidapi-key")
         return urlRequest
+    }
+    private func getURL(){
+        
     }
     func fetchSynonymes(completion: @escaping ([Synonyme]) -> () ){
         
@@ -109,15 +108,15 @@ public class FetchApi {
         }
     }
     func fetchDefinition(completion: @escaping ([Definition]) -> () ){
-        guard let getUrl = URL(string: builder.url) else {return}
+        guard let url = URL(string: builder.url) else {return}
 
-        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){ (data, response, error) in
-            guard let data = data else {return}
-            let definitions = try! JSONDecoder().decode([Definition].self, from: data)
+        URLSession.shared.dataTask(with: getUrlRequest(url:url)){ (data, response, error) in
+            guard let datas = data else {return}
+            let definitions = try! JSONDecoder().decode([Definition].self, from: datas)
                
             DispatchQueue.main.async {
                 completion(definitions)
             }
-        }
+        }.resume()
     }
 }

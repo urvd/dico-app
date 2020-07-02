@@ -14,9 +14,9 @@ struct WordDefinitionsView: View {
     @State var definitions: [Definition] = []
     var body: some View {
         VStack{
-            HStack{
-                Text("\(word) : definitions").font(.footnote)
-            }
+            VStack{
+                Text("\(word) : definitions").font(.title)
+            }.foregroundColor(.primary)
             
             List(definitions){ definition in
                 DefinitionItem(definition: definition)
@@ -37,25 +37,29 @@ struct WordDefinitionsView: View {
                     self.definitions = definitions
                 }
             }
-        }
+        }.foregroundColor(.gray)
 
     }
 
     struct DefinitionItem: View{
-        init(definition:Definition) {
+        /*init(definition:Definition) {
             self.definition = definition
-        }
+        }*/
         var definition:Definition
         var body: some View {
-            HStack{
-                    Text(definition.mot)
-                        .fontWeight(.bold)
-                    Divider()
-                    Text(definition.nature)
-                    .fontWeight(.thin)
-                Spacer()
-                Text(definition.definition)
-                Text(definition.source)
+            VStack{
+                //let result = definition.nature.trimmingCharacters(in: .whitespaces)
+                if !definition.nature.isEmpty{
+                     HStack{
+                        Text("Nature: ").fontWeight(.thin)
+                        Text(definition.nature)
+                            .fontWeight(.thin)
+                            .italic()
+                        Spacer()
+                    }
+                }
+                Text(definition.definition).font(.body)
+                Text("Source: "+definition.source).font(.footnote)
             }
         }
     }

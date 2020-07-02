@@ -36,3 +36,10 @@ struct Definition: Decodable, Identifiable,Hashable{
     var definition:String
     var dicolinkUrl:String
 }
+
+enum GETType:String{
+    case SYNONYME = "s",
+    ANTONYME = "a",
+    DEFINITION = "d",
+    EXPRESSION = "e"
+}
