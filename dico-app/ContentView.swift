@@ -26,6 +26,7 @@ struct ContentView: View {
                                 self.searchClick = true
                             }, onCommit: {
                             }).foregroundColor(.primary)
+                                .autocapitalization(.none)
 
                             Button(action: {
                                 self.searchText = ""
