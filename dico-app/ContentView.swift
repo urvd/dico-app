@@ -16,8 +16,8 @@ struct ContentView: View {
     @State private var tabScreen:Bool = false
     
     var body: some View {
+        
         NavigationView {
-                    // Search view
                     HStack {
                         HStack {
                             Image(systemName: "magnifyingglass")
@@ -35,20 +35,21 @@ struct ContentView: View {
                             }
                         }
                         .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.green)
                         .background(Color(.secondarySystemBackground))
                         .cornerRadius(10.0)
 
                         if searchClick && searchText != "" {
-                            NavigationLink(destination:TabFeatureView(searchText: self.searchText)) {
+                            NavigationLink(destination:ContentTabFeatureView(searchText: self.searchText)) {
                                 Text("Search")
                                 .foregroundColor(Color(.systemBlue))
                             }
                         }
-                    }.foregroundColor(Color.green)
-                    .padding(.horizontal)
-                    .navigationBarTitle(Text("Dictionnaire Francais"))
+                    }
         }
+        .padding(.horizontal)
+        .navigationBarTitle(Text("Dictionnaire Francais"))
+
     }
     
 }

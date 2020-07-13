@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C54EDE724BC514F00F13B49 /* ContentTabFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54EDE624BC514F00F13B49 /* ContentTabFeatureView.swift */; };
+		7C54EDE924BD072300F13B49 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 7C54EDE824BD072300F13B49 /* readme.md */; };
 		7C822054249F300F0008DB7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C822053249F300F0008DB7E /* AppDelegate.swift */; };
 		7C822056249F300F0008DB7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C822055249F300F0008DB7E /* SceneDelegate.swift */; };
 		7C822058249F300F0008DB7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C822057249F300F0008DB7E /* ContentView.swift */; };
@@ -17,11 +19,9 @@
 		7C822076249F30130008DB7E /* dico_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C822075249F30130008DB7E /* dico_appUITests.swift */; };
 		7C822086249F33110008DB7E /* DicoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C822085249F33110008DB7E /* DicoAPIService.swift */; };
 		7C82208824A07A910008DB7E /* WordDefinitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82208724A07A910008DB7E /* WordDefinitionsView.swift */; };
-		7C82208B24A11D5A0008DB7E /* TabFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82208A24A11D5A0008DB7E /* TabFeatureView.swift */; };
 		7C82209524AA1F1F0008DB7E /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82209424AA1F1F0008DB7E /* models.swift */; };
 		7C82209724AB60370008DB7E /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82209624AB60370008DB7E /* errors.swift */; };
 		7C82209924ADF8AE0008DB7E /* WordSynonymesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82209824ADF8AE0008DB7E /* WordSynonymesView.swift */; };
-		7C82209B24AF53B40008DB7E /* TabFeatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82209A24AF53B40008DB7E /* TabFeatureProvider.swift */; };
 		7C82209D24B2480A0008DB7E /* WordAntonymeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82209C24B2480A0008DB7E /* WordAntonymeView.swift */; };
 		7C82209F24B2482D0008DB7E /* WordExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82209E24B2482D0008DB7E /* WordExpressionView.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C54EDE624BC514F00F13B49 /* ContentTabFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTabFeatureView.swift; sourceTree = "<group>"; };
+		7C54EDE824BD072300F13B49 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		7C822050249F300F0008DB7E /* dico-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dico-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C822053249F300F0008DB7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C822055249F300F0008DB7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,11 +62,9 @@
 		7C822077249F30130008DB7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C822085249F33110008DB7E /* DicoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicoAPIService.swift; sourceTree = "<group>"; };
 		7C82208724A07A910008DB7E /* WordDefinitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionsView.swift; sourceTree = "<group>"; tabWidth = 4; };
-		7C82208A24A11D5A0008DB7E /* TabFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFeatureView.swift; sourceTree = "<group>"; };
 		7C82209424AA1F1F0008DB7E /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 		7C82209624AB60370008DB7E /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
 		7C82209824ADF8AE0008DB7E /* WordSynonymesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSynonymesView.swift; sourceTree = "<group>"; };
-		7C82209A24AF53B40008DB7E /* TabFeatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFeatureProvider.swift; sourceTree = "<group>"; };
 		7C82209C24B2480A0008DB7E /* WordAntonymeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAntonymeView.swift; sourceTree = "<group>"; };
 		7C82209E24B2482D0008DB7E /* WordExpressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordExpressionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +97,7 @@
 		7C822047249F300F0008DB7E = {
 			isa = PBXGroup;
 			children = (
+				7C54EDE824BD072300F13B49 /* readme.md */,
 				7C822052249F300F0008DB7E /* dico-app */,
 				7C822074249F30130008DB7E /* dico-appUITests */,
 				7C822051249F300F0008DB7E /* Products */,
@@ -126,7 +127,7 @@
 				7C822061249F30130008DB7E /* Info.plist */,
 				7C82205B249F30130008DB7E /* Preview Content */,
 				7C822069249F30130008DB7E /* dico-appTests */,
-				7C82208A24A11D5A0008DB7E /* TabFeatureView.swift */,
+				7C54EDE624BC514F00F13B49 /* ContentTabFeatureView.swift */,
 			);
 			path = "dico-app";
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 				7C822085249F33110008DB7E /* DicoAPIService.swift */,
 				7C82209424AA1F1F0008DB7E /* models.swift */,
 				7C82209624AB60370008DB7E /* errors.swift */,
-				7C82209A24AF53B40008DB7E /* TabFeatureProvider.swift */,
 			);
 			path = providers;
 			sourceTree = "<group>";
@@ -285,6 +285,7 @@
 			files = (
 				7C822060249F30130008DB7E /* LaunchScreen.storyboard in Resources */,
 				7C82205D249F30130008DB7E /* Preview Assets.xcassets in Resources */,
+				7C54EDE924BD072300F13B49 /* readme.md in Resources */,
 				7C82205A249F30130008DB7E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,11 +318,10 @@
 				7C822086249F33110008DB7E /* DicoAPIService.swift in Sources */,
 				7C82208824A07A910008DB7E /* WordDefinitionsView.swift in Sources */,
 				7C82209924ADF8AE0008DB7E /* WordSynonymesView.swift in Sources */,
-				7C82209B24AF53B40008DB7E /* TabFeatureProvider.swift in Sources */,
 				7C82209724AB60370008DB7E /* errors.swift in Sources */,
-				7C82208B24A11D5A0008DB7E /* TabFeatureView.swift in Sources */,
 				7C822056249F300F0008DB7E /* SceneDelegate.swift in Sources */,
 				7C822058249F300F0008DB7E /* ContentView.swift in Sources */,
+				7C54EDE724BC514F00F13B49 /* ContentTabFeatureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

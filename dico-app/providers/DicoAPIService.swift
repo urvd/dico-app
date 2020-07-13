@@ -14,7 +14,7 @@ struct Args{
     static var endpointSynonymes = "/synonymes"
     static var endpointAntonymes = "/antonymes"
     static var endpointDefinition = "/definitions"
-    static var endpointExpression = "/expression"
+    static var endpointExpression = "/expressions"
     static var RESULT_LIMIT = "limite=12"
 }
 
@@ -38,23 +38,11 @@ struct UrlBuilder{
     
 }
 
-struct Word{
-    init(word:String) {
-        self.word = word
-    }
-    var word:String
-}
-
-
 public class FetchApi:IFetcher {
     
-    //var type:GETType
     var word: String
-    var errOccur:Bool
     init(word:String) {
-        //self.type = type
         self.word = word
-        self.errOccur = false
     }
     
     private func getUrlRequest(url:URL) -> URLRequest{
@@ -66,7 +54,7 @@ public class FetchApi:IFetcher {
         return urlRequest
     }
 
-    func fetch<T:Decodable>(completion: @escaping(Result<[T],FetchERROR>) -> (),typop:GETType) {
+    internal func fetch<T:Decodable>(completion: @escaping(Result<[T],FetchERROR>) -> (),typop:GETType) {
         let builder = UrlBuilder(type:typop, word:self.word)
         guard let url = URL(string: builder.url) else {return}
         let req = getUrlRequest(url:url)
@@ -76,76 +64,29 @@ public class FetchApi:IFetcher {
                 return
             }
             do{
-                let results:[T] = try JSONDecoder().decode([T].self, from: datas)
+                let results = try JSONDecoder().decode([T].self, from: datas)
                 completion(.success(results))
+                print("dadas \(typop): " + datas.base64EncodedString())
             }catch{
                 completion(.failure(.NO_RESULT))
             }
-           // print("Result: \(results)")
-            //DispatchQueue.main.async {
-            //completion(.success(results))
-            //}
            
         }.resume()
 
     }
     func fetchSynonymes(completion: @escaping (Result<[Synonyme],FetchERROR>) -> (), typop:GETType){
-//        let builder = UrlBuilder(type:type, word:self.word)
-//        guard let getUrl = URL(string: builder.url) else {return}
-//
-//        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){ (data, response, error) in
-//            guard let datas = data else {return}
-//            let synonymes = try! JSONDecoder().decode([Synonyme].self, from: datas)
-//
-//            DispatchQueue.main.async {
-//                completion(synonymes)
-//            }
-//        }.resume()
         fetch(completion:completion, typop: typop)
     }
 //
      func fetchAntonyme(completion: @escaping (Result<[Antonyme],FetchERROR>) -> (), typop:GETType){
-//        let builder = UrlBuilder(type:type, word:self.word)
-//        guard let getUrl = URL(string: builder.url) else {return}
-//
-//        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){ (data, response, error) in
-//            guard let datas = data else {return}
-//            let antonymes = try! JSONDecoder().decode([Antonyme].self, from: datas)
-//
-//            DispatchQueue.main.async {
-//                completion(antonymes)
-//            }
-//        }.resume()
         fetch(completion:completion, typop: typop)
     }
 //
    func fetchExpression(completion: @escaping (Result<[Expression],FetchERROR>) -> (), typop:GETType){
-//        let builder = UrlBuilder(type:type, word:self.word)
-//        guard let getUrl = URL(string: builder.url) else {return}
-//
-//        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){ (data, response, error) in
-//            guard let datas = data else {return}
-//            let expressions = try! JSONDecoder().decode([Expression].self, from: datas)
-//
-//            DispatchQueue.main.async {
-//                completion(expressions)
-//            }
-//        }.resume()
         fetch(completion:completion, typop: typop)
     }
 //
     func fetchDefinition(completion: @escaping (Result<[Definition],FetchERROR>) -> (), typop:GETType){
-//        let builder = UrlBuilder(type:type, word:self.word)
-//        guard let url = URL(string: builder.url) else {return}
-//
-//        URLSession.shared.dataTask(with: getUrlRequest(url:url)){ (data, response, error) in
-//            guard let datas = data else {return}
-//            let definitions = try! JSONDecoder().decode([Definition].self, from: datas)
-//
-//            DispatchQueue.main.async {
-//                completion(definitions)
-//            }
-//        }.resume()
         fetch(completion:completion, typop: typop)
     }
 }

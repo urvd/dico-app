@@ -20,7 +20,7 @@ struct Antonyme: Decodable, Hashable{
     var dicolinkUrl:String
 }
 
-struct Expression: Decodable, Hashable{
+struct Expression: Decodable,Hashable{
     var mot:String
     var expression:String
     var semantique:String
@@ -46,13 +46,13 @@ enum GETType:String{
 }
 
 struct NoResult:Decodable{
-    var eror:String;
+    var error:String;
 }
 
 protocol IFetcher {
     
     func fetch<T: Decodable>(completion: @escaping (Result<[T],FetchERROR>) -> (),typop:GETType)
-   
+
 }
 
 

@@ -25,7 +25,7 @@ struct WordAntonymeView: View {
                         completion: { (result) in
                             switch result {
                                 case .failure(let error):
-                                    print("error in definitions: \(error)")
+                                    print("error in antonymes: \(error)")
                                     self.err = true
                                 case .success(let antonymes):
                                     self.antonymes = antonymes

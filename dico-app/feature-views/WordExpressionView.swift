@@ -20,8 +20,8 @@ struct WordExpressionView: View {
 
            List(expressions,id: \.expression){ result in
                VStack{
-                    Text("Semantique: \(result.semantique)")
                     Text("Expression: \(result.expression)")
+                    Text("Semantique: \(result.semantique)")
                }
                
            }.onAppear {
@@ -29,10 +29,10 @@ struct WordExpressionView: View {
                     completion: { (result) in
                        switch result {
                            case .failure(let error):
-                               print("error in definitions: \(error)")
+                               print("error in expressions: \(error)")
                                self.err = true
                            case .success(let expressions):
-                           self.expressions = expressions
+                               self.expressions = expressions;
                        }
                 },
                    typop: .EXPRESSION)

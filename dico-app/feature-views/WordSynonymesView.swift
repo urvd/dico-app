@@ -25,7 +25,7 @@ struct WordSynonymesView: View {
                     completion: { (result) in
                     switch result {
                         case .failure(let error):
-                                    print("error in definitions: \(error)")
+                                    print("error in synonymes: \(error)")
                                     self.err = true
                         case .success(let synonymes):
                                     self.synonymes = synonymes
