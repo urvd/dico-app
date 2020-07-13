@@ -7,12 +7,17 @@
 //
 
 import Foundation
+import SwiftUI
 
-enum ErrorType : Error {
-    case URL_ERR
+enum FetchERROR:Error{
+    case NO_RESULT
+    case ANOTHER
 }
-/*func RequestError() throws {
-    guard requestURL else {
-        throw ErrorType.URL_ERR
-    }
-}*/
+
+struct ErrorContent:View{
+    @State var mot:String = ""
+    
+    var body: some View{
+        Text("Pas de resultat pour \(mot)")
+    }
+}

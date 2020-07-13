@@ -12,33 +12,40 @@ struct WordDefinitionsView: View {
     
     @State var word:String = ""
     @State var definitions: [Definition] = []
+    @State var err:Bool = false
     var body: some View {
         VStack{
             VStack{
                 Text("\(word) : definitions").font(.title)
             }.foregroundColor(.primary)
-            
+                
             List(definitions){ definition in
-                DefinitionItem(definition: definition)
-                /*HStack{
-                    VStack{
-                        Text(definition.mot)
-                            .fontWeight(.bold)
-                        Text(definition.nature)
-                                   .fontWeight(.thin)
-                    }
-                    Text(definition.definition)
-                    Text(definition.source)
-                }*/
+//                if err{
+//                    ErrorContent(word)
+//                }else {
+                    DefinitionItem(definition: definition)
+//                }
             }
             .onAppear {
-                //let service = FetchApi(type:GETType.DEFINITION, word:self.word)
-                 FetchApi(type:GETType.DEFINITION, word:self.word).fetchDefinition{ (definitions) in
-                    self.definitions = definitions
-                }
+                FetchApi(word:self.word).fetchDefinition(
+                    completion: { (result) in
+                        switch result {
+                            case .failure(let error):
+                                        print("error in definitions: \(error)")
+                                        self.err = true
+                            case .success(let definitions):
+                                        self.definitions = definitions
+                            }
+                        //self.definitions = definitions
+                 },
+                    typop: .DEFINITION)
             }
         }.foregroundColor(.gray)
 
+    }
+    
+    var errorContent: some View{
+        Text("Pas de resultat pour \(word)")
     }
 
     struct DefinitionItem: View{

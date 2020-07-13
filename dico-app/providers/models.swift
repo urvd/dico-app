@@ -10,16 +10,17 @@ import Foundation
 
 
 // models
-struct Synonyme: Decodable{
+struct Synonyme: Decodable, Hashable{
     var mot:String
     var dicolinkUrl:String
 }
 
-struct Antonyme: Decodable{
+struct Antonyme: Decodable, Hashable{
     var mot:String
     var dicolinkUrl:String
 }
-struct Expression: Decodable{
+
+struct Expression: Decodable, Hashable{
     var mot:String
     var expression:String
     var semantique:String
@@ -42,4 +43,36 @@ enum GETType:String{
     ANTONYME = "a",
     DEFINITION = "d",
     EXPRESSION = "e"
+}
+
+struct NoResult:Decodable{
+    var eror:String;
+}
+
+protocol IFetcher {
+    
+    func fetch<T: Decodable>(completion: @escaping (Result<[T],FetchERROR>) -> (),typop:GETType)
+   
+}
+
+
+
+@propertyWrapper
+struct ResponseData<T>{
+    init() {
+        self.err = false
+        self.datas = []
+    }
+    private var datas:[T]
+    var err:Bool
+    
+    var wrappedValue:[T] {
+        get{
+            return self.datas
+        }
+        set{
+            self.datas = newValue
+        }
+        
+    }
 }

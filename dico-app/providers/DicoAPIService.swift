@@ -46,16 +46,15 @@ struct Word{
 }
 
 
-public class FetchApi {
+public class FetchApi:IFetcher {
     
-    var type:GETType
+    //var type:GETType
     var word: String
-    var builder: UrlBuilder
-    
-    init(type:GETType, word:String) {
-        self.type = type
+    var errOccur:Bool
+    init(word:String) {
+        //self.type = type
         self.word = word
-        self.builder = UrlBuilder(type:self.type, word:self.word);
+        self.errOccur = false
     }
     
     private func getUrlRequest(url:URL) -> URLRequest{
@@ -66,57 +65,87 @@ public class FetchApi {
         urlRequest.setValue("2ac8d4abe1msh45b7832cd81668ap195eefjsn339672521daf", forHTTPHeaderField:"x-rapidapi-key")
         return urlRequest
     }
-    private func getURL(){
-        
-    }
-    func fetchSynonymes(completion: @escaping ([Synonyme]) -> () ){
-        
-        guard let getUrl = URL(string: builder.url) else {return}
 
-        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){
-            (data, response, error) in
-            let synonymes = try! JSONDecoder().decode([Synonyme].self, from: data!)
-            
-            DispatchQueue.main.async {
-                completion(synonymes)
-            }
-        }
-    }
-    
-     func fetchAntonyme(completion: @escaping ([Antonyme]) -> () ){
-        guard let getUrl = URL(string: builder.url) else {return}
-
-        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){
-            (data, response, error) in
-            let antonymes = try! JSONDecoder().decode([Antonyme].self, from: data!)
-               
-            DispatchQueue.main.async {
-                completion(antonymes)
-            }
-        }
-    }
-    func fetchExpression(completion: @escaping ([Expression]) -> () ){
-        guard let getUrl = URL(string: builder.url) else {return}
-
-        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){
-            (data, response, error) in
-            let expressions = try! JSONDecoder().decode([Expression].self, from: data!)
-               
-            DispatchQueue.main.async {
-                completion(expressions)
-            }
-        }
-    }
-    func fetchDefinition(completion: @escaping ([Definition]) -> () ){
+    func fetch<T:Decodable>(completion: @escaping(Result<[T],FetchERROR>) -> (),typop:GETType) {
+        let builder = UrlBuilder(type:typop, word:self.word)
         guard let url = URL(string: builder.url) else {return}
-
-        URLSession.shared.dataTask(with: getUrlRequest(url:url)){ (data, response, error) in
-            guard let datas = data else {return}
-            let definitions = try! JSONDecoder().decode([Definition].self, from: datas)
-               
-            DispatchQueue.main.async {
-                completion(definitions)
+        let req = getUrlRequest(url:url)
+        URLSession.shared.dataTask(with: req) { (data, _, _) in
+            guard let datas = data else {
+                completion(.failure(.ANOTHER))
+                return
             }
+            do{
+                let results:[T] = try JSONDecoder().decode([T].self, from: datas)
+                completion(.success(results))
+            }catch{
+                completion(.failure(.NO_RESULT))
+            }
+           // print("Result: \(results)")
+            //DispatchQueue.main.async {
+            //completion(.success(results))
+            //}
+           
         }.resume()
+
+    }
+    func fetchSynonymes(completion: @escaping (Result<[Synonyme],FetchERROR>) -> (), typop:GETType){
+//        let builder = UrlBuilder(type:type, word:self.word)
+//        guard let getUrl = URL(string: builder.url) else {return}
+//
+//        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){ (data, response, error) in
+//            guard let datas = data else {return}
+//            let synonymes = try! JSONDecoder().decode([Synonyme].self, from: datas)
+//
+//            DispatchQueue.main.async {
+//                completion(synonymes)
+//            }
+//        }.resume()
+        fetch(completion:completion, typop: typop)
+    }
+//
+     func fetchAntonyme(completion: @escaping (Result<[Antonyme],FetchERROR>) -> (), typop:GETType){
+//        let builder = UrlBuilder(type:type, word:self.word)
+//        guard let getUrl = URL(string: builder.url) else {return}
+//
+//        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){ (data, response, error) in
+//            guard let datas = data else {return}
+//            let antonymes = try! JSONDecoder().decode([Antonyme].self, from: datas)
+//
+//            DispatchQueue.main.async {
+//                completion(antonymes)
+//            }
+//        }.resume()
+        fetch(completion:completion, typop: typop)
+    }
+//
+   func fetchExpression(completion: @escaping (Result<[Expression],FetchERROR>) -> (), typop:GETType){
+//        let builder = UrlBuilder(type:type, word:self.word)
+//        guard let getUrl = URL(string: builder.url) else {return}
+//
+//        URLSession.shared.dataTask(with: getUrlRequest(url:getUrl)){ (data, response, error) in
+//            guard let datas = data else {return}
+//            let expressions = try! JSONDecoder().decode([Expression].self, from: datas)
+//
+//            DispatchQueue.main.async {
+//                completion(expressions)
+//            }
+//        }.resume()
+        fetch(completion:completion, typop: typop)
+    }
+//
+    func fetchDefinition(completion: @escaping (Result<[Definition],FetchERROR>) -> (), typop:GETType){
+//        let builder = UrlBuilder(type:type, word:self.word)
+//        guard let url = URL(string: builder.url) else {return}
+//
+//        URLSession.shared.dataTask(with: getUrlRequest(url:url)){ (data, response, error) in
+//            guard let datas = data else {return}
+//            let definitions = try! JSONDecoder().decode([Definition].self, from: datas)
+//
+//            DispatchQueue.main.async {
+//                completion(definitions)
+//            }
+//        }.resume()
+        fetch(completion:completion, typop: typop)
     }
 }

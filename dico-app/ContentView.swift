@@ -34,17 +34,18 @@ struct ContentView: View {
                                 Image(systemName:"xmark.circle.fill").opacity(searchText == "" ? 0 : 1)
                             }
                         }
-                        //.padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
+                        .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
                         .foregroundColor(.secondary)
                         .background(Color(.secondarySystemBackground))
                         .cornerRadius(10.0)
 
-                        if searchClick && searchText != "" {                                NavigationLink(destination:TabFeatureView(searchText: self.searchText)) {
+                        if searchClick && searchText != "" {
+                            NavigationLink(destination:TabFeatureView(searchText: self.searchText)) {
                                 Text("Search")
                                 .foregroundColor(Color(.systemBlue))
                             }
                         }
-                    }
+                    }.foregroundColor(Color.green)
                     .padding(.horizontal)
                     .navigationBarTitle(Text("Dictionnaire Francais"))
         }

@@ -9,8 +9,24 @@
 import SwiftUI
 
 struct TabFeatureView: View {
+    
     @State var searchText:String = ""
-    @State var activeTab:GETType = .DEFINITION
+//    var responses : ResponseResults{
+//        var result:ResponseResults
+//        let cache = NSCache<NSString, ResponseResults>()
+//        let key = NSString(string:self.searchText)
+//
+//        if let cached = cache.object(forKey:key) {
+//            result = cached
+//            return result
+//        } else {
+//            result = ResponseProvider().provide(text: self.searchText)
+//            cache.setObject(result, forKey:key )
+//            return result
+//        }
+//
+//    }
+    
     var body: some View {
         ZStack{
             TabView{
@@ -19,26 +35,41 @@ struct TabFeatureView: View {
                         Text("Définition")
                     }
                                      
-                Text("replace with Synonyme content if exist")
+                synonymeView
                     .tabItem {
                         Text("Synonyme")
                     }
                                      
-                Text("replace with Antonyme content if exist")
+                antonymeView
                     .tabItem {
                         Text("Antonyme")
                     }
                                      
-                Text("replace with Expression content if exist")
+                expressionView
                     .tabItem {
                         Text("Expression")
                     }
             }
         }
     }
+    var errorContent: some View{
+        Text("Pas de resultat pour \(searchText)")
+    }
     
     var definitionView:WordDefinitionsView{
         self.searchText != "" ?  WordDefinitionsView(word:self.searchText): WordDefinitionsView()
+    }
+    var synonymeView: WordSynonymesView {
+        WordSynonymesView(word:self.searchText)
+    }
+    
+    var antonymeView:some View{
+        WordAntonymeView(word:self.searchText)
+        //ErrorContent(mot: searchText)
+       
+    }
+    var expressionView:WordExpressionView{
+        WordExpressionView(word:self.searchText)
     }
 }
 
